@@ -1,5 +1,5 @@
 # twitter-sentiment-tracking
-An application that extracts sentiments from tweets and displays them in a real-time dashboard. This application was developed as part of the course Stream Processing & Real-Time Analytics at IE School of Human Sciences and Technology to showcase a prototype using PySpark and Apache Kafka. 
+An application prototype that extracts sentiments from tweets and displays them in a real-time dashboard. It was developed as part of the course Stream Processing & Real-Time Analytics at IE School of Human Sciences and Technology to showcase how to get real-time insights using PySpark and Apache Kafka. 
 
 It uses the tweepy library to stream tweets and to write them to a Kafka topic. A PySpark job gets the raw text and extracts the sentiments, calculates the average per minute and send it to another Kafka topic for processed data (Note: As this is just a prototype, no text preprocessing is done to the tweets). From this second Kafka topic, the sentiments are consumed by a reactive Shiny app, using sparklyr, the Spark API from R. 
 
